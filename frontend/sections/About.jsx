@@ -1,6 +1,8 @@
 function About() {
     return <div>
-        <h1 className="text-7xl text-center text-blue-400">My name is Denver Klein Mesa</h1>
+        <h1 className="text-4xl text-center text-blue-400">
+            My name is Denver Klein Mesa
+        </h1>
 
         <p>
         I am currently in my penultimate year/3rd year studying Software Engineering at UTS, and harbor a strong passion
