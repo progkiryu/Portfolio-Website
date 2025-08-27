@@ -1,5 +1,0 @@
-{
-    "watch": ["backend"],
-    "ignore": ["frontend", "node_modules", "dist"],
-    "ext": ["js, json, html, css, ejs"]
-}
