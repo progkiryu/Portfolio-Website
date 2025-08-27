@@ -10,14 +10,8 @@ function Email() {
             import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             e.target,
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        ).then(
-            (_) => {
-                console.log("Email sent!");
-            },
-            (err) => {
-                console.error("Email error: ", err);
-            }
-        );
+        ).then((_) => console.log("Email sent!")
+        ).catch((err) => console.error("Email error: ", err));
 
         e.target.reset();
     }
