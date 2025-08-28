@@ -7,6 +7,8 @@ function Skills() {
         <p>Frameworks: ReactJS, ElectronJS, NodeJS, ExpressJS</p>
         <p>Databases: MySQL, MongoDB</p>
         <p>Developer Tools: Git, Jira, Confluence, VSCode, Figma</p>
+
+        <a href="../../files/Career Resume - Denver Klein Mesa.pdf" download>Learn more on my resume</a>
     </div>
 }
 

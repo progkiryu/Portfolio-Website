@@ -1,7 +1,6 @@
 import emailjs from "@emailjs/browser";
 
 function Email() {
-
     const sendEmail = (e) => {
         e.preventDefault();
 
