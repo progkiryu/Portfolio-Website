@@ -4,7 +4,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
 function Projects() {
-    return <>
+    return <div className="h-[60vh] bg-[#232121]">
+        <h1>Projects</h1>
         <Accordion>
             <AccordionSummary>
                 <Typography component="span">ThreadFlow</Typography>
@@ -67,7 +68,7 @@ function Projects() {
         </Accordion>
 
         <a href="https://github.com/progkiryu" target="_blank">View my repositories on Github!</a>
-    </>
+    </div>
 }
 
 export default Projects;

@@ -5,7 +5,7 @@ import Contact from "./sections/Contact.jsx";
 
 function App() {
   return (
-    <div>
+    <div className="h-[300vh]">
       <About />
       <Skills />
       <Projects />
