@@ -49,7 +49,7 @@ function Skills() {
             text-white
             px-4
             py-2
-            rounded" href="../../files/Career Resume - Denver Klein Mesa.pdf" download>Learn more on my resume</a>
+            rounded" href="../../files/Career Resume - Denver Klein Mesa.pdf" download>Learn more on my resume!</a>
         </div>
     </div>
 }
