@@ -3,7 +3,16 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
+import { useState } from "react";
+
 function Projects() {
+
+    const [expanded, setExpanded] = useState();
+
+    const handleExpand = (project) => (_, newProject) => {
+        setExpanded(newProject ? project : false);
+    }
+
     return <div className="flex h-[60vh] bg-[#232121]">
         <div className="w-1/2 flex flex-col items-center justify-center space-y-5">
             <h1 className="
@@ -26,7 +35,7 @@ function Projects() {
             rounded" href="https://github.com/progkiryu" target="_blank">View my repositories on Github!</a>
         </div>
         <div className="w-1/2 flex-col items-center">
-            <Accordion>
+            <Accordion disableGutters expanded={expanded === "project1"} onChange={handleExpand("project1")}>
                 <AccordionSummary>
                     <Typography component="span">ThreadFlow</Typography>
                 </AccordionSummary>
@@ -46,7 +55,7 @@ function Projects() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+            <Accordion disableGutters expanded={expanded === "project2"} onChange={handleExpand("project2")}>
                 <AccordionSummary>
                     <Typography component="span">Cyclone Detection System</Typography>
                 </AccordionSummary>
@@ -72,7 +81,7 @@ function Projects() {
                     </Typography>     
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+            <Accordion disableGutters expanded={expanded === "project3"} onChange={handleExpand("project3")}>
                 <AccordionSummary>
                     <Typography component="span">RESOLVE</Typography>
                 </AccordionSummary>
