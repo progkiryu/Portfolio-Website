@@ -1,4 +1,5 @@
-import { Typography } from "@mui/material";
+import { isDev } from "../main";
+
 
 function Intro() {
     return <div className="flex h-[100vh] bg-[#232121]">
@@ -16,7 +17,8 @@ function Intro() {
             <h2 className="font-medium text-2xl text-white">And this is my portfolio website.</h2>
         </div>
         <div className="w-1/2 flex justify-center items-center">
-            <img className="w-full h-full rounded-full object-cover border-4 border-black" src="../../files/photo.jpg" />
+            <img className="w-30 h-full rounded-full object-cover border-4 border-black" src=
+            {isDev() ? "../../files/photo.jpg" : "assets/files/photo.jpg"} />
         </div>
     </div>
 }

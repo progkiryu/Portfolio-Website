@@ -39,6 +39,7 @@ function Skills() {
                     <img className="w-20" title="Node" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
                     <img className="w-20" title="Express" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
                     <img className="w-20" title="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" />
+                    <img className="w-20" title="Tailwind CSS" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" />
                 </div>
                 <h2 className="text-xl text-white">Databases:</h2>
                 <div className="w-1/2 flex space-x-5 justify-center">

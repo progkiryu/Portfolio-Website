@@ -2,6 +2,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import { isDev } from "../main";
 
 function About() {
     return <div className="flex flex-col h-[100vh]">
@@ -60,7 +61,8 @@ function About() {
             text-white
             px-4
             py-2
-            rounded" href="../../files/Career Resume - Denver Klein Mesa.pdf" download>Learn more on my resume!</a>
+            rounded" href={isDev() ? "../../files/Career Resume - Denver Klein Mesa.pdf" 
+            : "assets/files/Career Resume - Denver Klein Mesa.pdf"} download>Learn more on my resume!</a>
         </div>
     </div>
 }
