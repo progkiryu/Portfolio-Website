@@ -12,8 +12,8 @@ function Skills() {
         setExpanded(newProject ? project : false);
     }    
 
-    return <div className="flex h-[60vh] flex-col bg-[#232121]">
-        <div className="flex h-[55vh]">
+    return <div className="flex h-[100vh] flex-col bg-[#232121]">
+        <div className="flex h-[90vh]">
             <div className="w-1/2 flex flex-col items-center justify-center space-y-4">
                 <h1 className="
                 font-medium
@@ -26,31 +26,31 @@ function Skills() {
                 to-orange-500">Skills</h1>
                 <h2 className="text-xl text-white">Primary Languages:</h2>
                 <div className="w-1/2 flex space-x-5 justify-center">
-                    <img className="w-20" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-                    <img className="w-20" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                    <img className="w-20" title="C++" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
+                    <img className="w-20" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                    <img className="w-20" title="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                    <img className="w-20" title="Python" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
+                    <img className="w-20" title="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <img className="w-20" title="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Frameworks:</h2>
                 <div className="w-1/2 flex space-x-5 justify-center">
-                    <img className="w-20" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" />
+                    <img className="w-20" title="React" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
+                    <img className="w-20" title="Node" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+                    <img className="w-20" title="Express" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+                    <img className="w-20" title="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Databases:</h2>
                 <div className="w-1/2 flex space-x-5 justify-center">
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                    <img className="w-20" title="MongoDB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+                    <img className="w-20" title="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Developer Tools:</h2>
                 <div className="w-1/2 flex space-x-5 justify-center">
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-                    <img className="w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
+                    <img className="w-20" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                    <img className="w-20" title="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+                    <img className="w-20" title="Visual Studio Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+                    <img className="w-20" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
                 </div>
             </div>
             <div className="w-1/2 flex flex-col items-center justify-center space-y-5">
@@ -179,7 +179,7 @@ function Skills() {
                 </Accordion>
             </div>
         </div>
-        <div className="flex h-[5vh] justify-center items-center">
+        <div className="flex h-[10vh] justify-center items-center">
             <a className="
             bg-gradient-to-r
             from-yellow-500

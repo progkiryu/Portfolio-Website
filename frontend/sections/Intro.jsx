@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 
 function Intro() {
-    return <div className="flex h-[60vh] bg-[#232121]">
+    return <div className="flex h-[100vh] bg-[#232121]">
         <div className="w-1/2 flex flex-col justify-center">
             <h1 className="
             font-medium
@@ -16,7 +16,7 @@ function Intro() {
             <h2 className="font-medium text-2xl text-white">And this is my portfolio website.</h2>
         </div>
         <div className="w-1/2 flex justify-center items-center">
-            <img className="max-w-full max-h-full rounded-full object-cover border-4 border-black" src="../../files/photo.jpg" />
+            <img className="w-full h-full rounded-full object-cover border-4 border-black" src="../../files/photo.jpg" />
         </div>
     </div>
 }

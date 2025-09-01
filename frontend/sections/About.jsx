@@ -2,11 +2,10 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import { TablePagination } from "@mui/material";
 
 function About() {
-    return <div className="flex flex-col h-[60vh]">
-        <div className="flex h-[55vh]">
+    return <div className="flex flex-col h-[100vh]">
+        <div className="flex h-[90vh]">
             <div className="w-1/2 flex flex-col items-center justify-center space-y-5">
                 <h1 className="
                 font-medium
@@ -52,7 +51,7 @@ function About() {
                 </Accordion>
             </div>
         </div>
-        <div className="h-[5vh] flex justify-center items-center">
+        <div className="h-[10vh] flex justify-center items-center">
             <a className="
             bg-gradient-to-r
             from-yellow-500
