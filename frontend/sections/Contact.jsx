@@ -2,7 +2,7 @@ import Email from "../components/Email.jsx";
 
 function Contact() {
     return <div className="h-[100vh]">
-        <div className="h-[15vh] flex justify-center">
+        <div className="h-[15vh] flex items-center justify-center">
             <h1 className="
             font-medium
             text-4xl
