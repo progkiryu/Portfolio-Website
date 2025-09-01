@@ -15,14 +15,22 @@ function Email() {
         e.target.reset();
     }
 
-    return <form onSubmit={sendEmail}>
-        <label>Name: *</label>
-        <input type="text" name="name" required></input>
+    return <form onSubmit={sendEmail} className="w-1/2 flex flex-col items-center justify-center space-y-4">
+        <label className="text-xl text-[#232121]">Name:</label>
+        <input className="border" type="text" name="name" required></input>
         
-        <label>Message: *</label>
-        <textarea name="message" required></textarea>
+        <label className="text-xl text-[#232121]">Message:</label>
+        <textarea className="border" name="message" required></textarea>
 
-        <button type="submit">Send Inquiry</button>
+        <button className="
+        bg-gradient-to-r
+        from-yellow-500
+        via-red-500
+        to-orange-500
+        text-white
+        px-4
+        py-2
+        rounded" type="submit">Send Inquiry</button>
     </form>
 }
 
