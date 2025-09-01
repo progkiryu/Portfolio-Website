@@ -1,3 +1,9 @@
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import { TablePagination } from "@mui/material";
+
 function About() {
     return <div className="flex flex-col h-[60vh]">
         <div className="flex h-[55vh]">
@@ -28,9 +34,22 @@ function About() {
                 from-yellow-500
                 via-red-500
                 to-orange-500">Experience</h1>
-                <p className="text-[#232121]">
-                    Optik Consultancy
-                </p>
+                <Accordion disableGutters className="bg-[#232121]">
+                    <AccordionSummary>
+                        <Typography component="span">Optik Consultancy</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography component="p"><strong>Position:</strong> Engineering Intern/Full-Stack Developer</Typography>
+                        <Typography component="p"><strong>Duration:</strong> May 2025 - August 2025</Typography>
+                        <Typography component="p"><strong>Location:</strong> Botany, Sydney, Australia</Typography>
+                        <Typography component="p">
+                            For 3 months, I have led and worked alongside 4 other software engineering students
+                            in consulting with a client revealing their main problem and requirements, to develop a solution
+                            that covers the criteria needed. Not only have I improved on my programming expertise, but rather
+                            my leadership capabilities.
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
             </div>
         </div>
         <div className="h-[5vh] flex justify-center items-center">

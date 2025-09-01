@@ -112,6 +112,7 @@ function Skills() {
                             weather results from an AI model, regarding its size and speed to determine 
                             if a cyclone is present. This system relies immensely on machine learning 
                             and data analytics to help train the model in improving its detection accuracy.
+                        </Typography>                          
                         <div className="w-full flex justify-center">
                             <p><strong>Languages:</strong></p>
                             <img className="w-10" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
@@ -120,19 +121,31 @@ function Skills() {
                             <img className="w-10" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                         </div>
                         <div className="w-full flex justify-center">
-                            <p><strong>Frameworks/Modules:</strong></p> .NET, Blazor, Flask, pytorch, scikit-learn
-                            <img className="w-10" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/.NET_Core_Logo.svg" />
+                            <p><strong>Frameworks:</strong></p>
+                            <img className="w-10" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_.NET_logo.png" />
+                            <img className="w-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Blazor.png" />
                         </div>
-                        </Typography>  
-                        <Typography component="p"> 
-                            <a href="https://github.com/twdly/sds-lnn-ui" target="_blank">
-                                <strong>Repository - Website</strong>
-                            </a>
-                            <br />
-                            <a href="https://github.com/twdly/sds-lnn-api" target="_blank">
-                                <strong>Repository - API/AI</strong>
-                            </a>
-
+                        <Typography component="a" className="
+                            bg-gradient-to-r
+                            from-yellow-500
+                            via-red-500
+                            to-orange-500
+                            text-white
+                            px-4
+                            py-2
+                            rounded" href="https://github.com/twdly/sds-lnn-ui" target="_blank">
+                            Github Repository - Website
+                        </Typography>
+                        <Typography component="a" className="
+                            bg-gradient-to-r
+                            from-yellow-500
+                            via-red-500
+                            to-orange-500
+                            text-white
+                            px-4
+                            py-2
+                            rounded" href="https://github.com/twdly/sds-lnn-api" target="_blank">
+                            Github Repository - API/AI
                         </Typography>     
                     </AccordionDetails>
                 </Accordion>
@@ -146,7 +159,21 @@ function Skills() {
                             smooth attacking animations to create immersion. Built for Year 11 SDD and utilised
                             Python's game-creating module 'pygame' to deal with movement physics, attack registers,
                             menu layout and much more.
-                            <br />
+                        </Typography>
+                        <div className="w-full flex justify-center">
+                            <p><strong>Language:</strong></p>
+                            <img className="w-10" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
+                        </div>
+                        <Typography component="a" className="
+                            bg-gradient-to-r
+                            from-yellow-500
+                            via-red-500
+                            to-orange-500
+                            text-white
+                            px-4
+                            py-2
+                            rounded" href="https://github.com/progkiryu/YR11-SDD-Project" target="_blank">
+                            Github Repository
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
