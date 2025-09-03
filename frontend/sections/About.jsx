@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import { isDev } from "../main";
 
 function About() {
-    return <div className="flex flex-col h-[90vh] xl:h-[100vh]">
+    return <div id="about" className="flex flex-col h-[90vh] xl:h-[100vh]">
         <div className="flex flex-col items-center xl:flex-row xl:h-[90vh]">
             <div className="flex flex-col h-[40vh] items-center justify-center space-y-5 xl:w-1/2 xl:h-[45vh]">
                 <h1 className="

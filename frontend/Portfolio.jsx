@@ -6,7 +6,7 @@ import Country from "./sections/Country.jsx";
 
 function App() {
   return (
-    <div className="h-[590vh] xl:h-[500vh]">
+    <div className="h-[590vh] xl:h-[500vh] !scroll-smooth">
       <Intro />
       <About />
       <Skills />
