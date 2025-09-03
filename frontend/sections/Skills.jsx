@@ -13,8 +13,8 @@ function Skills() {
     }    
 
     return <div className="flex h-[200vh] flex-col bg-[#232121] xl:h-[100vh]">
-        <div className="flex flex-col h-[190vh] xl:flex-row items-center">
-            <div className="flex flex-col h-[95vh] items-center justify-center space-y-4 xl:w-1/2">
+        <div className="flex flex-col h-[190vh] items-center xl:flex-row xl:h-[90vh]">
+            <div className="flex flex-col h-[95vh] items-center justify-center space-y-4 xl:w-1/2 xl:h-[45vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -54,7 +54,7 @@ function Skills() {
                     <img className="w-10 sm:w-20" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
                 </div>
             </div>
-            <div className="flex flex-col h-[95vh] items-center justify-center space-y-5 xl:w-1/2">
+            <div className="flex flex-col h-[95vh] items-center justify-center space-y-5 xl:w-1/2 xl:h-[45vh]">
                 <h1 className="
                 font-medium
                 text-4xl

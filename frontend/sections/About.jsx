@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 import { isDev } from "../main";
 
 function About() {
-    return <div className="flex flex-col h-[80vh] xl:h-[100vh]">
-        <div className="flex flex-col h-[70vh] xl:flex-row items-center xl:h-[90vh]">
-            <div className="flex flex-col h-[35vh] items-center justify-center space-y-5 xl:w-1/2">
+    return <div className="flex flex-col h-[90vh] xl:h-[100vh]">
+        <div className="flex flex-col items-center xl:flex-row xl:h-[90vh]">
+            <div className="flex flex-col h-[40vh] items-center justify-center space-y-5 xl:w-1/2 xl:h-[45vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -24,7 +24,7 @@ function About() {
                     industry, I hope to not only improve my current coding skillset, but to utilise it in solving real-world problems.
                 </p>
             </div>
-            <div className="flex flex-col h-[35vh] items-center justify-center space-y-5 xl:w-1/2">
+            <div className="flex flex-col h-[40vh] items-center justify-center space-y-5 xl:w-1/2 xl:h-[45vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -34,15 +34,15 @@ function About() {
                 from-yellow-500
                 via-red-500
                 to-orange-500">Experience</h1>
-                <Accordion disableGutters className="bg-[#232121]">
+                <Accordion disableGutters className="!bg-[#232121]">
                     <AccordionSummary>
-                        <Typography component="span">Optik Consultancy</Typography>
+                        <Typography className="text-white" component="span">Optik Consultancy</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography component="p"><strong>Position:</strong> Engineering Intern/Full-Stack Developer</Typography>
-                        <Typography component="p"><strong>Duration:</strong> May 2025 - August 2025</Typography>
-                        <Typography component="p"><strong>Location:</strong> Botany, Sydney, Australia</Typography>
-                        <Typography component="p">
+                        <Typography className="text-white" component="p"><strong>Position:</strong> Engineering Intern/Full-Stack Developer</Typography>
+                        <Typography className="text-white" component="p"><strong>Duration:</strong> May 2025 - August 2025</Typography>
+                        <Typography className="text-white" component="p"><strong>Location:</strong> Botany, Sydney, Australia</Typography>
+                        <Typography className="text-white" component="p">
                             For 3 months, I have led and worked alongside 4 other software engineering students
                             in consulting with a client revealing their main problem and requirements, to develop a solution
                             that covers the criteria needed. Not only have I improved on my programming expertise, but rather

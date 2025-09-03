@@ -2,7 +2,7 @@ import { isDev } from "../main";
 
 
 function Intro() {
-    return <div className="flex h-[100vh] bg-[#232121]">
+    return <div className="flex h-[100vh] bg-[#232121] flex-col items-center justify-center lg:flex-row">
         <div className="w-1/2 flex flex-col justify-center">
             <h1 className="
             font-medium
@@ -17,7 +17,7 @@ function Intro() {
             <h2 className="font-medium text-2xl text-white">And this is my portfolio website.</h2>
         </div>
         <div className="w-1/2 flex justify-center items-center">
-            <img className="w-30 h-full rounded-full object-cover border-4 border-black" src=
+            <img className="w-30 h-30 rounded-full object-cover border-4 border-black lg:h-[80vh]" src=
             {isDev() ? "../../files/photo.jpg" : "assets/files/photo.jpg"} />
         </div>
     </div>
