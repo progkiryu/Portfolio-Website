@@ -1,7 +1,7 @@
 import Email from "../components/Email.jsx";
 
 function Contact() {
-    return <div id="contact" className="h-[100vh]">
+    return <div id="contact" className="h-[100vh] bg-white w-3/4 flex flex-col">
         <div className="h-[10vh] flex items-center justify-center">
             <h1 className="
             font-medium
@@ -19,7 +19,7 @@ function Contact() {
                 <a className="w-20" href="https://www.linkedin.com/in/denver-klein-mesa-aa323231a" title="LinkedIn" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
                 </a>
-                <a className="w-20" href="https://github.com/progkiryu" title="GitHub" target="_blank">
+                <a className="w-20 bg-white" href="https://github.com/progkiryu" title="GitHub" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" />
                 </a>
             </div>

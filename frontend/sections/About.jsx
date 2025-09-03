@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 import { isDev } from "../main";
 
 function About() {
-    return <div id="about" className="flex flex-col h-[90vh] xl:h-[100vh]">
-        <div className="flex flex-col items-center xl:flex-row xl:h-[90vh]">
-            <div className="flex flex-col h-[40vh] items-center justify-center space-y-5 xl:w-1/2 xl:h-[45vh]">
+    return <div id="about" className="flex flex-col w-3/4 h-[90vh] xl:h-[40vh] bg-white">
+        <div className="flex flex-col items-center xl:flex-row xl:h-[30vh]">
+            <div className="flex flex-col h-[30vh] items-center justify-center space-y-5 xl:w-1/2 xl:h-[45vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -61,7 +61,8 @@ function About() {
             text-white
             px-4
             py-2
-            rounded" href={isDev() ? "../../files/Career Resume - Denver Klein Mesa.pdf" 
+            rounded
+            hover:scale-125 transition ease-in-out duration-300 transform" href={isDev() ? "../../files/Career Resume - Denver Klein Mesa.pdf" 
             : "assets/files/Career Resume - Denver Klein Mesa.pdf"} download>Learn more on my resume!</a>
         </div>
     </div>
