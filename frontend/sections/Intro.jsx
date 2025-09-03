@@ -20,11 +20,14 @@ function Intro() {
             </div>
             <div className="flex flex-col items-center space-y-4">
                 <a href="#about" className="text-white font-medium text-2xl 
-                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-yellow-500 hover:via-red-500 hover:to-orange-500">ABOUT</a>
+                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-yellow-500 hover:via-red-500 hover:to-orange-500
+                hover:scale-125 transition ease-in-out duration-300 transform">ABOUT</a>
                 <a href="#skills" className="text-white font-medium text-2xl
-                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-yellow-500 hover:via-red-500 hover:to-orange-500">SKILLS</a>
+                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-yellow-500 hover:via-red-500 hover:to-orange-500
+                hover:scale-125 transition ease-in-out duration-300 transform">SKILLS</a>
                 <a href="#contact" className="text-white font-medium text-2xl
-                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-yellow-500 hover:via-red-500 hover:to-orange-500">CONTACT</a>
+                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-yellow-500 hover:via-red-500 hover:to-orange-500
+                hover:scale-125 transition ease-in-out duration-300 transform">CONTACT</a>
             </div>
         </div>
         <div className="w-1/2 flex justify-center items-center">
