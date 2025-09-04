@@ -17,7 +17,7 @@ function About() {
                 from-yellow-500
                 via-red-500
                 to-orange-500">About Me</h1>
-                <p className="text-[#232121]">
+                <p className="text-[#232121] px-4 text-center">
                     I am currently in my penultimate year/3rd year studying Software Engineering at UTS, and harbor a strong passion
                     towards programming and developing applications. This all originated from my liking towards game development through
                     Scratch, C# and Python, in which I produced small-scale games during high school. And with my entrance to the software

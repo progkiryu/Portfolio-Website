@@ -68,12 +68,14 @@ function Skills() {
                 <div>
                     <Accordion disableGutters expanded={expanded === "project1"} onChange={handleExpand("project1")}>
                         <AccordionSummary>
-                            <div className="flex flex-col">
-                                <Typography component="span">ThreadFlow</Typography>
-                                <img className="w-full h-[20vh]" src={isDev() ? "../../files/threadline.png" : "assets/files/threadline.png"} />
+                            <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
+                            ${expanded === "project1" ? "h-20" : "hover:h-40"}`}>
+                                <img className="w-full h-full blur-sm object-cover" src={isDev() ? "../../files/threadline.png" : "assets/files/threadline.png"} />
+                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-[#232121]">ThreadLine</h1>
                             </div>
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails className="space-y-4">
+                            <hr />
                             <Typography component="p">
                                 A desktop application prototype built for an Australian-based furniture
                                 company, Brand Furniture, in improving day-to-day operations through 
@@ -110,9 +112,14 @@ function Skills() {
                     </Accordion>
                     <Accordion disableGutters expanded={expanded === "project2"} onChange={handleExpand("project2")}>
                         <AccordionSummary>
-                            <Typography component="span">Cyclone Detection System</Typography>
+                            <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
+                            ${expanded === "project2" ? "h-20" : "hover:h-40"}`}>
+                                <img className="w-full h-full blur-sm object-cover" src={isDev() ? "../../files/cyclone.png" : "assets/files/cyclone.png"} />
+                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-[#232121]">Cyclone Detection System</h1>
+                            </div>
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails className="space-y-4">
+                            <hr />
                             <Typography component="p">
                                 A website application built for Engineers Without Borders that projects 
                                 weather results from an AI model, regarding its size and speed to determine 
@@ -157,9 +164,14 @@ function Skills() {
                     </Accordion>
                     <Accordion disableGutters expanded={expanded === "project3"} onChange={handleExpand("project3")}>
                         <AccordionSummary>
-                            <Typography component="span">RESOLVE</Typography>
+                            <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
+                            ${expanded === "project3" ? "h-20" : "hover:h-40"}`}>
+                                <img className="w-full h-full blur-sm object-cover" src={isDev() ? "../../files/resolve.png" : "assets/files/resolve.png"} />
+                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-white">RESOLVE</h1>
+                            </div>
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails className="space-y-4">
+                            <hr />
                             <Typography component="p">
                                 PvE video game based off the iconic Ghost of Tsushima, incorporating sword play and
                                 smooth attacking animations to create immersion. Built for Year 11 SDD and utilised
