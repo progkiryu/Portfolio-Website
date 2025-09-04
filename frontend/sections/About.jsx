@@ -5,11 +5,11 @@ import Typography from "@mui/material/Typography";
 import { isDev } from "../main";
 
 function About() {
-    return <div id="about" className="flex flex-col w-3/4 h-[120vh] bg-white
-    sm:h-[170vh]">
-        <div className="w-full flex flex-col h-[110vh] items-center
-        sm:h-[150vh] sm:py-10">
-            <div className="flex flex-col h-[55vh] items-center justify-center space-y-5
+    return <div id="about" className="flex flex-col w-3/4 h-[150vh] bg-white
+    sm:h-[210vh]">
+        <div className="w-full flex flex-col h-[140vh] items-center py-10
+        sm:h-[190vh]">
+            <div className="flex flex-col h-[50vh] items-center justify-center space-y-5
             sm:h-[70vh] sm:justify-start">
                 <h1 className="
                 font-medium
@@ -27,8 +27,8 @@ function About() {
                     industry, I hope to not only improve my current coding skillset, but to utilise it in solving real-world problems.
                 </p>
             </div>
-            <div className="w-full flex flex-col h-[55vh] items-center justify-center space-y-5
-            sm:h-[50vh]">
+            <div className="w-full flex flex-col h-[90vh] items-center justify-center space-y-5
+            sm:h-[120vh]">
                 <h1 className="
                 font-medium
                 text-4xl

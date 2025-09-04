@@ -2,8 +2,8 @@ import Email from "../components/Email.jsx";
 
 function Contact() {
     return <div id="contact" className="h-[100vh] bg-white w-3/4 flex flex-col
-    sm:h-[200vh]">
-        <div className="h-[20vh] flex items-center justify-center">
+    sm:h-[210vh]">
+        <div className="h-[30vh] flex items-center justify-center">
             <h1 className="
             font-medium
             text-4xl
@@ -14,7 +14,7 @@ function Contact() {
             via-red-500
             to-orange-500">Connect with me!</h1>
         </div>
-        <div className="h-[80vh] flex flex-col items-center justify-center
+        <div className="h-[70vh] flex flex-col items-center justify-center
         sm:h-[180vh]">
             <Email />
             <div className="w-1/2 h-full flex items-center justify-center space-x-5">        

@@ -13,12 +13,12 @@ function Skills() {
         setExpanded(newProject ? project : false);
     }    
 
-    return <div id="skills" className="flex w-3/4 h-[165vh] flex-col bg-[#232121]
-    sm:h-[350vh]">
-        <div className="flex flex-col h-[155vh] items-center
-        sm:h-[330vh]">
-            <div className="flex flex-col h-[55vh] items-center justify-start py-10 space-y-4
-            sm:h-[130vh]">
+    return <div id="skills" className="flex w-3/4 h-[200vh] flex-col bg-[#232121]
+    sm:h-[450vh]">
+        <div className="flex flex-col h-[190vh] items-center
+        sm:h-[430vh]">
+            <div className="flex flex-col h-[80vh] items-center justify-start py-10 space-y-4
+            sm:h-[210vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -29,37 +29,37 @@ function Skills() {
                 via-red-500
                 to-orange-500">Skills</h1>
                 <h2 className="text-xl text-white">Primary Languages:</h2>
-                <div className="w-1/2 flex space-x-5 justify-center">
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="C++" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Python" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                <div className="w-1/2 flex space-x-2 justify-center">
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="C++" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Python" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Frameworks:</h2>
-                <div className="w-1/2 flex space-x-5 justify-center">
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="React" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Node" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Express" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Tailwind CSS" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" />
+                <div className="w-1/2 flex space-x-2 justify-center">
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="React" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Node" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Express" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Tailwind CSS" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" />
                 </div>
                 <h2 className="text-xl text-white">Databases:</h2>
-                <div className="w-1/2 flex space-x-5 justify-center">
-                    <img className="w-8 hober:scale-125 transition ease-in-out duration-300 transform" title="MongoDB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                <div className="w-1/2 flex space-x-2 justify-center">
+                    <img className="min-w-[10vw] hober:scale-125 transition ease-in-out duration-300 transform" title="MongoDB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Developer Tools:</h2>
-                <div className="w-1/2 flex space-x-5 justify-center">
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Visual Studio Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-                    <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
+                <div className="w-1/2 flex space-x-2 justify-center">
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Visual Studio Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
                 </div>
             </div>
-            <div className="flex flex-col h-[100vh] items-center justify-start space-y-5
-            sm:h-[200vh]">
+            <div className="flex flex-col h-[110vh] items-center justify-start space-y-5
+            sm:h-[220vh]">
                 <h1 className="
                 font-medium
                 text-4xl
