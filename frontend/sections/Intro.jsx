@@ -2,7 +2,7 @@ import { isDev } from "../main";
 
 
 function Intro() {
-    return <div className="w-3/4 flex h-[100vh] bg-[#232121] flex-col items-center justify-center space-y-10 lg:flex-row">
+    return <div className="w-3/4 flex h-[120vh] bg-[#232121] flex-col items-center justify-center space-y-10 lg:h-[100vh] lg:flex-row">
         <div className="flex flex-col items-center justify-center space-y-10 w-1/2">
             <div className="w-full flex flex-col items-center justify-center">
                 <h1 className="
