@@ -13,9 +13,12 @@ function Skills() {
         setExpanded(newProject ? project : false);
     }    
 
-    return <div id="skills" className="flex w-3/4 h-[165vh] flex-col bg-[#232121] 2xl:h-[80vh]">
-        <div className="flex flex-col h-[155vh] items-center 2xl:flex-row 2xl:h-[70vh]">
-            <div className="flex flex-col h-[55vh] items-center justify-top py-10 space-y-4 2xl:w-1/2 2xl:h-[70vh]">
+    return <div id="skills" className="flex w-3/4 h-[165vh] flex-col bg-[#232121]
+    sm:h-[350vh]">
+        <div className="flex flex-col h-[155vh] items-center
+        sm:h-[330vh]">
+            <div className="flex flex-col h-[55vh] items-center justify-start py-10 space-y-4
+            sm:h-[130vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -55,7 +58,8 @@ function Skills() {
                     <img className="w-8 hover:scale-125 transition ease-in-out duration-300 transform" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
                 </div>
             </div>
-            <div className="flex flex-col h-[100vh] items-center justify-top space-y-5 2xl:w-1/2 2xl:h-[70vh]">
+            <div className="flex flex-col h-[100vh] items-center justify-start space-y-5
+            sm:h-[200vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -76,7 +80,6 @@ function Skills() {
                         </AccordionSummary>
                         <AccordionDetails>
                             <div className="flex flex-col items-center justify-center space-y-4">
-                                <hr />
                                 <p className="text-[#232121] text-center">
                                     A desktop application prototype built for an Australian-based furniture
                                     company, Brand Furniture, in improving day-to-day operations through 
@@ -127,7 +130,6 @@ function Skills() {
                         </AccordionSummary>
                         <AccordionDetails className="space-y-4">
                             <div className="flex flex-col items-center justify-center space-y-4">
-                                <hr />
                                 <p className="text-[#232121] text-center">
                                     A website application built for Engineers Without Borders that projects 
                                     weather results from an AI model, regarding its size and speed to determine 
@@ -187,14 +189,13 @@ function Skills() {
                         </AccordionSummary>
                         <AccordionDetails className="space-y-4">
                             <div className="flex flex-col items-center justify-center space-y-4">
-                                <hr />
                                 <p className="text-[#232121] text-center">
                                     PvE video game based off the iconic Ghost of Tsushima, incorporating sword play and
                                     smooth attacking animations to create immersion. Built for Year 11 SDD and utilised
                                     Python's game-creating module 'pygame' to deal with movement physics, attack registers,
                                     menu layout and much more.
                                 </p>
-                                <div className="flex flex-col items-center justify-center">
+                                <div className="flex flex-col items-center justify-center space-y-2">
                                     <p><strong>Language:</strong></p>
                                     <img className="w-10" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
                                 </div>
@@ -216,7 +217,8 @@ function Skills() {
                 </div>
             </div>
         </div>
-        <div className="flex h-[10vh] justify-center items-center">
+        <div className="flex h-[10vh] justify-center items-center
+        sm:h-[20vh]">
             <a className="
             bg-gradient-to-r
             from-yellow-500

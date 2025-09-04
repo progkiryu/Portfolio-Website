@@ -5,9 +5,12 @@ import Typography from "@mui/material/Typography";
 import { isDev } from "../main";
 
 function About() {
-    return <div id="about" className="flex flex-col w-3/4 h-[120vh] bg-white md:h-[100vh] lg:h-[50vh]">
-        <div className="flex flex-col h-[110vh] items-center md:h-[90vh] lg:flex-row lg:h-[40vh]">
-            <div className="flex flex-col h-[55vh] items-center justify-center space-y-5 md:h-[45vh] lg:w-1/2 lg:h-[40vh]">
+    return <div id="about" className="flex flex-col w-3/4 h-[120vh] bg-white
+    sm:h-[170vh]">
+        <div className="w-full flex flex-col h-[110vh] items-center
+        sm:h-[150vh] sm:py-10">
+            <div className="flex flex-col h-[55vh] items-center justify-center space-y-5
+            sm:h-[70vh] sm:justify-start">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -24,7 +27,8 @@ function About() {
                     industry, I hope to not only improve my current coding skillset, but to utilise it in solving real-world problems.
                 </p>
             </div>
-            <div className="flex flex-col h-[55vh] items-center justify-center space-y-5 md:w-[45vh] lg:w-1/2 lg:h-[40vh]">
+            <div className="w-full flex flex-col h-[55vh] items-center justify-center space-y-5
+            sm:h-[50vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -34,8 +38,8 @@ function About() {
                 from-yellow-500
                 via-red-500
                 to-orange-500">Experience</h1>
-                <Accordion disableGutters className="!bg-[#232121] w-full md:w-3/4">
-                    <AccordionSummary>
+                <Accordion disableGutters className="!bg-[#232121]">
+                    <AccordionSummary className="w-full">
                         <div className="flex w-full justify-between items-center">
                             <h1 className="text-3xl font-medium text-white">Optik Consultancy</h1>
                             <img className="w-12 h-12" src={isDev() ? "../../files/optik.png" : "assets/files/optik.png"} />
@@ -55,7 +59,8 @@ function About() {
                 </Accordion>
             </div>
         </div>
-        <div className="h-[10vh] flex justify-center items-center">
+        <div className="h-[10vh] flex justify-center items-center
+        sm:h-[20vh]">
             <a className="
             bg-gradient-to-r
             from-yellow-500

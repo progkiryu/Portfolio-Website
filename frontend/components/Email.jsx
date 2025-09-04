@@ -16,7 +16,8 @@ function Email() {
     }
 
     return <form onSubmit={sendEmail} className="w-full h-[45vh] pa rounded-3xl
-     bg-[#232121] flex flex-col justify-center items-center space-y-2 lg:w-1/2">
+     bg-[#232121] flex flex-col justify-center items-center space-y-2 py-10
+     sm:h-[90vh]">
         <label className="text-xl text-left text-white w-3/4">Name:</label>
         <input className="rounded-lg w-3/4" type="text" name="name" placeholder="what is it..." required></input>
         
@@ -31,7 +32,8 @@ function Email() {
         text-white
         px-4
         py-2
-        rounded" type="submit">Send Inquiry</button>
+        rounded
+        hover:scale-125 transition ease-in-out duration-300 transform" type="submit">Send Inquiry</button>
     </form>
 }
 

@@ -6,9 +6,10 @@ import Country from "./sections/Country.jsx";
 
 function App() {
   return (
-    <div className="h-[700vh] xl:h-[500vh] !scroll-smooth
+    <div className="h-[585vh] !scroll-smooth
     bg-gradient-to-b from-yellow-500 via-red-500 to-orange-500
-    flex flex-col items-center">
+    flex flex-col items-center
+    sm:h-[920vh]">
       <Intro />
       <About />
       <Skills />
