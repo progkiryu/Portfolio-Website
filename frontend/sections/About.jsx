@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 import { isDev } from "../main";
 
 function About() {
-    return <div id="about" className="flex flex-col w-3/4 h-[90vh] xl:h-[40vh] bg-white">
-        <div className="flex flex-col items-center xl:flex-row xl:h-[30vh]">
-            <div className="flex flex-col h-[30vh] items-center justify-center space-y-5 xl:w-1/2 xl:h-[45vh]">
+    return <div id="about" className="flex flex-col w-3/4 h-[100vh] bg-white lg:h-[50vh]">
+        <div className="flex flex-col h-[90vh] items-center lg:flex-row lg:h-[40vh]">
+            <div className="flex flex-col h-[45vh] items-center justify-center space-y-5 lg:w-1/2 lg:h-[40vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -24,7 +24,7 @@ function About() {
                     industry, I hope to not only improve my current coding skillset, but to utilise it in solving real-world problems.
                 </p>
             </div>
-            <div className="flex flex-col h-[40vh] items-center justify-center space-y-5 xl:w-1/2 xl:h-[45vh]">
+            <div className="flex flex-col h-[45vh] items-center justify-center space-y-5 lg:w-1/2 lg:h-[40vh]">
                 <h1 className="
                 font-medium
                 text-4xl
