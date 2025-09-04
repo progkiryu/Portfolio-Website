@@ -6,11 +6,14 @@ import { isDev } from "../main";
 
 function About() {
     return <div id="about" className="flex flex-col w-3/4 h-[150vh] bg-white
-    sm:h-[210vh]">
-        <div className="w-full flex flex-col h-[140vh] items-center py-10
-        sm:h-[190vh]">
+    sm:h-[210vh]
+    md:h-[60vh]">
+        <div className="w-full flex flex-col h-[140vh] items-center pt-10
+        sm:h-[190vh]
+        md:h-[50vh]">
             <div className="flex flex-col h-[50vh] items-center justify-center space-y-5
-            sm:h-[70vh] sm:justify-start">
+            sm:h-[70vh] sm:justify-start
+            md:h-[10vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -28,7 +31,8 @@ function About() {
                 </p>
             </div>
             <div className="w-full flex flex-col h-[90vh] items-center justify-center space-y-5
-            sm:h-[120vh]">
+            sm:h-[120vh]
+            md:h-[40vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -60,7 +64,8 @@ function About() {
             </div>
         </div>
         <div className="h-[10vh] flex justify-center items-center
-        sm:h-[20vh]">
+        sm:h-[20vh]
+        md:h-[10vh]">
             <a className="
             bg-gradient-to-r
             from-yellow-500

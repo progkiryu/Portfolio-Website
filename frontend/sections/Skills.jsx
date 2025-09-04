@@ -14,11 +14,14 @@ function Skills() {
     }    
 
     return <div id="skills" className="flex w-3/4 h-[200vh] flex-col bg-[#232121]
-    sm:h-[450vh]">
+    sm:h-[450vh]
+    md:h-[145vh]">
         <div className="flex flex-col h-[190vh] items-center
-        sm:h-[430vh]">
+        sm:h-[430vh]
+        md:h-[135vh]">
             <div className="flex flex-col h-[80vh] items-center justify-start py-10 space-y-4
-            sm:h-[210vh]">
+            sm:h-[210vh]
+            md:h-[70vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -59,7 +62,8 @@ function Skills() {
                 </div>
             </div>
             <div className="flex flex-col h-[110vh] items-center justify-start space-y-5
-            sm:h-[220vh]">
+            sm:h-[220vh]
+            md:h-[65vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -218,7 +222,8 @@ function Skills() {
             </div>
         </div>
         <div className="flex h-[10vh] justify-center items-center
-        sm:h-[20vh]">
+        sm:h-[20vh]
+        md:h-[10vh]">
             <a className="
             bg-gradient-to-r
             from-yellow-500

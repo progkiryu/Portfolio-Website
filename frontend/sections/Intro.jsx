@@ -3,11 +3,14 @@ import { isDev } from "../main";
 
 function Intro() {
     return <div className="w-3/4 flex h-[100vh] bg-[#232121] flex-col items-center justify-center space-y-10
-    sm:space-y-0 sm:h-[200vh]">
+    sm:space-y-0 sm:h-[200vh]
+    md:flex-row md:h-[100vh] lg:flex-col">
         <div className="w-full flex flex-col items-center justify-center w-1/2 space-y-4
-        sm:h-full">
+        sm:h-full
+        md:h-[70vh]">
             <div className="w-full flex flex-col items-center justify-center
-            sm:h-[50vh]">
+            sm:h-[50vh]
+            md:h-[20vh]">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -34,7 +37,8 @@ function Intro() {
             </div>
         </div>
         <div className="w-full flex justify-center items-center
-        sm:h-[150vh]">
+        sm:h-[150vh]
+        md:h-[70vh]">
             <img className="w-full w-[50vw] h-[40vh] rounded-full object-cover border-4 border-black
             sm:w-[35vw] sm:h-[75vh]" src=
             {isDev() ? "../../files/photo.jpg" : "assets/files/photo.jpg"} />
