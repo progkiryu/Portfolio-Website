@@ -65,13 +65,13 @@ function Skills() {
                 from-yellow-500
                 via-red-500
                 to-orange-500">Projects</h1>
-                <div>
-                    <Accordion disableGutters expanded={expanded === "project1"} onChange={handleExpand("project1")}>
+                <div className="flex flex-col items-center">
+                    <Accordion className="w-3/4" disableGutters expanded={expanded === "project1"} onChange={handleExpand("project1")}>
                         <AccordionSummary>
                             <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
                             ${expanded === "project1" ? "h-20" : "hover:h-40"}`}>
                                 <img className="w-full h-full blur-sm object-cover" src={isDev() ? "../../files/threadline.png" : "assets/files/threadline.png"} />
-                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-[#232121]">ThreadLine</h1>
+                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-[#232121] text-center">ThreadLine</h1>
                             </div>
                         </AccordionSummary>
                         <AccordionDetails className="space-y-4">
@@ -110,12 +110,12 @@ function Skills() {
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion disableGutters expanded={expanded === "project2"} onChange={handleExpand("project2")}>
+                    <Accordion className="w-3/4" disableGutters expanded={expanded === "project2"} onChange={handleExpand("project2")}>
                         <AccordionSummary>
                             <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
                             ${expanded === "project2" ? "h-20" : "hover:h-40"}`}>
                                 <img className="w-full h-full blur-sm object-cover" src={isDev() ? "../../files/cyclone.png" : "assets/files/cyclone.png"} />
-                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-[#232121]">Cyclone Detection System</h1>
+                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-[#232121] text-center">Cyclone Detection System</h1>
                             </div>
                         </AccordionSummary>
                         <AccordionDetails className="space-y-4">
@@ -162,12 +162,12 @@ function Skills() {
                             </Typography>     
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion disableGutters expanded={expanded === "project3"} onChange={handleExpand("project3")}>
+                    <Accordion className="w-3/4" disableGutters expanded={expanded === "project3"} onChange={handleExpand("project3")}>
                         <AccordionSummary>
                             <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
                             ${expanded === "project3" ? "h-20" : "hover:h-40"}`}>
                                 <img className="w-full h-full blur-sm object-cover" src={isDev() ? "../../files/resolve.png" : "assets/files/resolve.png"} />
-                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-white">RESOLVE</h1>
+                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-3xl text-white text-center">RESOLVE</h1>
                             </div>
                         </AccordionSummary>
                         <AccordionDetails className="space-y-4">
