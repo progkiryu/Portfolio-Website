@@ -9,7 +9,7 @@ function App() {
     <div className="h-[650vh] !scroll-smooth
     bg-gradient-to-b from-yellow-500 via-red-500 to-orange-500
     flex flex-col items-center
-    sm:h-[1000vh]">
+    sm:h-[1070vh]">
       <Intro />
       <About />
       <Skills />

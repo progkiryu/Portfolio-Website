@@ -3,7 +3,7 @@ import { isDev } from "../main";
 
 function Intro() {
     return <div className="w-3/4 flex h-[100vh] bg-[#232121] flex-col items-center justify-center space-y-10
-    sm:flex-row sm:space-y-0 sm:h-[100vh]">
+    sm:flex-row sm:space-y-0">
         <div className="w-full flex flex-col items-center justify-center w-1/2 space-y-4">
             <div className="w-full flex flex-col items-center justify-center">
                 <h1 className="
