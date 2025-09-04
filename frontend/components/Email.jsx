@@ -15,8 +15,8 @@ function Email() {
         e.target.reset();
     }
 
-    return <form onSubmit={sendEmail} className="w-3/4 h-[45vh] pa rounded-3xl
-     bg-[#232121] flex flex-col justify-center items-center space-y-4 lg:w-1/2">
+    return <form onSubmit={sendEmail} className="w-full h-[45vh] pa rounded-3xl
+     bg-[#232121] flex flex-col justify-center items-center space-y-2 lg:w-1/2">
         <label className="text-xl text-left text-white w-3/4">Name:</label>
         <input className="rounded-lg w-3/4" type="text" name="name" placeholder="what is it..." required></input>
         

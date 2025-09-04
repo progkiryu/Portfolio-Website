@@ -34,7 +34,7 @@ function About() {
                 from-yellow-500
                 via-red-500
                 to-orange-500">Experience</h1>
-                <Accordion disableGutters className="!bg-[#232121] w-3/4">
+                <Accordion disableGutters className="!bg-[#232121] w-full md:w-3/4">
                     <AccordionSummary>
                         <div className="flex w-full justify-between items-center">
                             <h1 className="text-3xl font-medium text-white">Optik Consultancy</h1>
