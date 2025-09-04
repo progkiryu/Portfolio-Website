@@ -3,6 +3,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+import { isDev } from "../main";
 
 function Skills() {
 
@@ -69,7 +70,7 @@ function Skills() {
                         <AccordionSummary>
                             <div className="flex flex-col">
                                 <Typography component="span">ThreadFlow</Typography>
-                                <img className="w-full h-[20vh]" src="../../files/threadline.png" />
+                                <img className="w-full h-[20vh]" src={isDev() ? "../../files/threadline.png" : "assets/files/threadline.png"} />
                             </div>
                         </AccordionSummary>
                         <AccordionDetails>
