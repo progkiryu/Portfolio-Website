@@ -125,7 +125,7 @@ function Skills() {
                             <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
                             ${expanded === "project2" ? "h-20" : "hover:h-40"}`}>
                                 <img className="w-full h-full blur-sm object-cover" src={isDev() ? "../../files/cyclone.png" : "assets/files/cyclone.png"} />
-                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-2xl text-[#232121] text-center sm:text=3xl">Cyclone Detection System</h1>
+                                <h1 className="absolute inset-0 flex items-center justify-center font-medium text-2xl text-[#232121] text-center sm:text-3xl">Cyclone Detection System</h1>
                             </div>
                         </AccordionSummary>
                         <AccordionDetails className="space-y-4">
