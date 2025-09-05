@@ -1,14 +1,30 @@
 import { isDev } from "../main";
-
+import Typed from "typed.js";
+import { useRef, useEffect } from "react";
 
 function Intro() {
+    const headerElement = useRef(null);
+
+    useEffect(() => {
+        const typed = new Typed(headerElement.current, {
+            strings: ["My name is Denver Klein Mesa."],
+            typeSpeed: 50,
+            backSpeed: 35,
+            showCursor: true,
+            cursorChar: "_",
+        });
+        return () => {
+            typed.destroy();
+        };
+    }, []);
+
     return (
         <div className="flex flex-col lg:flex-row w-3/4 min-h-screen bg-[#232121] items-center justify-center px-10 space-y-2">
             <div className="flex flex-col items-center justify-center w-full lg:w-1/2 h-1/2">
                 <div className="text-center space-y-2 py-6">
-                    <h1 className="font-medium text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500">
+                    <span ref={headerElement} className="font-medium text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500">
                         My name is Denver Klein Mesa.
-                    </h1>
+                    </span>
                     <h2 className="font-medium text-2xl text-white">
                         And this is my portfolio website.
                     </h2>

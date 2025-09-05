@@ -3,8 +3,16 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { isDev } from "../main";
+import { useState } from "react";
 
 function About() {
+
+    const [expanded, setExpanded] = useState(false);
+
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
+
     return (
         <div
             id="about"
@@ -24,15 +32,16 @@ function About() {
                 </p>
             </div>
 
-            {/* Experience Section */}
             <div className="flex flex-col items-center text-center space-y-6 px-4">
                 <h1 className="text-4xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500">
                     Experience
                 </h1>
 
-                <Accordion disableGutters className="!bg-[#232121] w-full rounded-md">
+                <Accordion expanded={expanded === "exp1"} disableGutters className="!bg-[#232121] w-full rounded-md"
+                onChange={handleChange("exp1")}>
                     <AccordionSummary className="w-full">
-                        <div className="flex w-full justify-between items-center px-2">
+                        <div className={`w-full h-10 flex justify-between items-center relative transition-all ease-in-out duration-300 transform
+                            ${expanded === "exp1" ? "h-15" : "hover:h-20"}`}>
                             <h2 className="text-2xl font-medium text-white">Optik Consultancy</h2>
                             <img
                                 className="w-10 h-10 object-contain"

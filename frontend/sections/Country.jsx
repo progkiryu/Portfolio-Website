@@ -1,6 +1,5 @@
 function Country() {
-    return <div className="h-[100vh] bg-[#232121]">
-
+    return <div className="bg-[#232121]">
     </div>
 }
 
