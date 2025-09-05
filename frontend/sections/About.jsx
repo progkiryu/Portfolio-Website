@@ -9,7 +9,7 @@ function About() {
 
     const [expanded, setExpanded] = useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
+    const handleChange = (panel) => (_, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
 
@@ -37,7 +37,7 @@ function About() {
                     Experience
                 </h1>
 
-                <Accordion expanded={expanded === "exp1"} disableGutters className="!bg-[#232121] w-full rounded-md"
+                <Accordion expanded={expanded === "exp1"} disableGutters className="!bg-[#232121] max-w-3xl rounded-md"
                 onChange={handleChange("exp1")}>
                     <AccordionSummary className="w-full">
                         <div className={`w-full h-10 flex justify-between items-center relative transition-all ease-in-out duration-300 transform

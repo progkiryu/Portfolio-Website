@@ -65,7 +65,7 @@ function Skills() {
                 via-red-500
                 to-orange-500">Projects</h1>
                 <div className="flex flex-col items-center">
-                    <Accordion disableGutters expanded={expanded === "project1"} onChange={handleExpand("project1")}>
+                    <Accordion className="max-w-4xl" disableGutters expanded={expanded === "project1"} onChange={handleExpand("project1")}>
                         <AccordionSummary>
                             <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
                             ${expanded === "project1" ? "h-20" : "hover:h-40"}`}>
@@ -115,7 +115,7 @@ function Skills() {
                             </div>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion className="w-full" disableGutters expanded={expanded === "project2"} onChange={handleExpand("project2")}>
+                    <Accordion className="max-w-4xl" disableGutters expanded={expanded === "project2"} onChange={handleExpand("project2")}>
                         <AccordionSummary>
                             <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
                             ${expanded === "project2" ? "h-20" : "hover:h-40"}`}>
@@ -174,7 +174,7 @@ function Skills() {
                             </div>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion className="w-full" disableGutters expanded={expanded === "project3"} onChange={handleExpand("project3")}>
+                    <Accordion className="max-w-4xl" disableGutters expanded={expanded === "project3"} onChange={handleExpand("project3")}>
                         <AccordionSummary>
                             <div className={`w-full h-10 relative transition-all ease-in-out duration-300 transform
                             ${expanded === "project3" ? "h-20" : "hover:h-40"}`}>
@@ -200,6 +200,8 @@ function Skills() {
                                     via-red-500
                                     to-orange-500
                                     text-white
+                                    text-xl
+                                    font-medium
                                     px-4
                                     py-2
                                     rounded

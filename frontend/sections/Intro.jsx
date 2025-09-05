@@ -7,9 +7,14 @@ function Intro() {
 
     useEffect(() => {
         const typed = new Typed(headerElement.current, {
-            strings: ["My name is Denver Klein Mesa."],
+            strings: ["I am Denver Klein Mesa.", 
+                "I am a Software Engineer.", 
+                "I am a Web Developer.",
+                "I am a UTS Student.",
+                "cool typing effect, huh?"],
             typeSpeed: 50,
             backSpeed: 35,
+            loop: true,
             showCursor: true,
             cursorChar: "_",
         });
