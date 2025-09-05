@@ -15,16 +15,15 @@ function Email() {
         e.target.reset();
     }
 
-    return <form onSubmit={sendEmail} className="w-full h-[45vh] pa rounded-3xl
-     bg-[#232121] flex flex-col justify-center items-center space-y-2 py-10
-     sm:h-[90vh]">
+    return <form onSubmit={sendEmail} className="rounded-3xl w-3/4 space-y-4 py-5
+     bg-[#232121] flex flex-col justify-center items-center">
         <label className="text-xl text-left text-white w-3/4">Name:</label>
         <input className="rounded-lg w-3/4" type="text" name="name" placeholder="what is it..." required></input>
         
         <label className="text-xl text-left text-white w-3/4">Message:</label>
-        <textarea className="w-3/4 rounded-lg h-60" name="message" placeholder="ask me anything..." required></textarea>
+        <textarea className="w-3/4 rounded-lg h-[15vh]" name="message" placeholder="ask me anything..." required></textarea>
 
-        <button className="
+        <button className="w-3/4 space-y-10
         bg-gradient-to-r
         from-yellow-500
         via-red-500

@@ -1,7 +1,6 @@
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { isDev } from "../main";
 
@@ -13,15 +12,9 @@ function Skills() {
         setExpanded(newProject ? project : false);
     }    
 
-    return <div id="skills" className="flex w-3/4 h-[200vh] flex-col bg-[#232121]
-    sm:h-[450vh]
-    md:h-[145vh]">
-        <div className="flex flex-col h-[190vh] items-center
-        sm:h-[430vh]
-        md:h-[135vh]">
-            <div className="flex flex-col h-[80vh] items-center justify-start py-10 space-y-4
-            sm:h-[210vh]
-            md:h-[70vh]">
+    return <div id="skills" className="flex w-3/4 min-h-screen mx-auto py-10 space-y-16 flex-col bg-[#232121]">
+        <div className="flex flex-col items-center text-center space-y-16 px-4">
+            <div className="flex flex-col items-center justify-start space-y-4">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -32,38 +25,36 @@ function Skills() {
                 via-red-500
                 to-orange-500">Skills</h1>
                 <h2 className="text-xl text-white">Primary Languages:</h2>
-                <div className="w-1/2 flex space-x-2 justify-center">
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="C++" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Python" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                <div className="w-1/2 flex space-x-4 justify-center">
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="C++" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Python" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Frameworks:</h2>
-                <div className="w-1/2 flex space-x-2 justify-center">
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="React" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Node" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Express" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Tailwind CSS" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" />
+                <div className="w-1/2 flex space-x-4 justify-center">
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="React" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Node" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Express" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Tailwind CSS" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" />
                 </div>
                 <h2 className="text-xl text-white">Databases:</h2>
-                <div className="w-1/2 flex space-x-2 justify-center">
-                    <img className="min-w-[10vw] hober:scale-125 transition ease-in-out duration-300 transform" title="MongoDB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                <div className="w-1/2 flex space-x-4 justify-center">
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="MongoDB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Developer Tools:</h2>
-                <div className="w-1/2 flex space-x-2 justify-center">
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Visual Studio Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-                    <img className="min-w-[10vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
+                <div className="w-1/2 flex space-x-4 justify-center">
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Visual Studio Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+                    <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
                 </div>
             </div>
-            <div className="flex flex-col h-[110vh] items-center justify-start space-y-5
-            sm:h-[220vh]
-            md:h-[65vh]">
+            <div className="flex flex-col items-center justify-start space-y-6">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -221,18 +212,9 @@ function Skills() {
                 </div>
             </div>
         </div>
-        <div className="flex h-[10vh] justify-center items-center
-        sm:h-[20vh]
-        md:h-[10vh]">
-            <a className="
-            bg-gradient-to-r
-            from-yellow-500
-            via-red-500
-            to-orange-500
-            text-white
-            px-4
-            py-2
-            rounded
+        <div className="flex justify-center items-center">
+            <a className="bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500
+            text-white px-6 py-3 rounded-md text-lg font-medium
             hover:scale-125 transition ease-in-out duration-300 transform" href="https://github.com/progkiryu" target="_blank">View my Github!</a>
         </div>
     </div>
