@@ -7,12 +7,23 @@ import { useState } from "react";
 function App() {
 
   const [showNotification, setShowNotification] = useState(false);
+  const [message, setMessage] = useState("");
 
-  const copyEmail = async () => {
+  const copyMessage = async (type) => {
     try {
-        await navigator.clipboard.writeText("denmesa24@outlook.com");
+    
+        if (type === "email") { 
+          await navigator.clipboard.writeText("denmesa24@outlook.com");
+          setMessage("Email copied to clipboard!");
+        }
+        else if (type === "inquiry") {
+          setMessage("Inquiry sent!");
+        }
         setShowNotification(true);
-        setTimeout(() => setShowNotification(false), 5000);
+        setTimeout(() => {
+          setShowNotification(false);
+          setMessage("");
+        }, 5000);
     }
     catch (err) {
         console.error(`Failed to copy: ${err}`);
@@ -27,10 +38,10 @@ function App() {
         <Intro />
         <About />
         <Skills />
-        <Contact copyEmail={copyEmail} />
+        <Contact copyMessage={copyMessage} />
       </div>
       {showNotification && <div className="flex justify-center">
-        <h1 className="fixed top-10 py-3 px-3 rounded-xl text-white text-center bg-green-500">Email copied to clipboard!</h1>
+        <h1 className="fixed top-10 py-3 px-3 rounded-xl text-white text-center bg-green-500">{message}</h1>
       </div> }
     </>
   )
