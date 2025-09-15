@@ -25,7 +25,7 @@ function Skills() {
                 via-red-500
                 to-orange-500">Skills</h1>
                 <h2 className="text-xl text-white">Primary Languages:</h2>
-                <div className="w-1/2 flex space-x-4 justify-center">
+                <div className="w-full flex space-x-4 justify-center">
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="C++" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
@@ -34,7 +34,7 @@ function Skills() {
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Frameworks:</h2>
-                <div className="w-1/2 flex space-x-4 justify-center">
+                <div className="w-full flex space-x-4 justify-center">
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="React" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Node" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Express" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
@@ -42,12 +42,12 @@ function Skills() {
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Tailwind CSS" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" />
                 </div>
                 <h2 className="text-xl text-white">Databases:</h2>
-                <div className="w-1/2 flex space-x-4 justify-center">
+                <div className="w-full flex space-x-4 justify-center">
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="MongoDB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
                 </div>
                 <h2 className="text-xl text-white">Developer Tools:</h2>
-                <div className="w-1/2 flex space-x-4 justify-center">
+                <div className="w-full flex space-x-4 justify-center">
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Visual Studio Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
@@ -106,6 +106,8 @@ function Skills() {
                                 via-red-500
                                 to-orange-500
                                 text-white
+                                text-xl
+                                font-medium
                                 px-4
                                 py-2
                                 rounded
@@ -153,6 +155,8 @@ function Skills() {
                                     via-red-500
                                     to-orange-500
                                     text-white
+                                    text-xl
+                                    font-medium
                                     px-4
                                     py-2
                                     rounded
@@ -165,6 +169,8 @@ function Skills() {
                                     via-red-500
                                     to-orange-500
                                     text-white
+                                    text-xl
+                                    font-medium
                                     px-4
                                     py-2
                                     rounded

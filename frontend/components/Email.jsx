@@ -33,6 +33,8 @@ function Email({ copyMessage }) {
         via-red-500
         to-orange-500
         text-white
+        text-xl
+        font-medium
         px-4
         py-2
         rounded
