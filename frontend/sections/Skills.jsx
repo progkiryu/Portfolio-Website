@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -14,7 +15,16 @@ function Skills() {
 
     return <div id="skills" className="flex w-3/4 min-h-screen mx-auto py-10 space-y-16 flex-col bg-[#232121]">
         <div className="flex flex-col items-center text-center space-y-16 px-4">
-            <div className="flex flex-col items-center justify-start space-y-4">
+            <motion.div
+            variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 }
+            }}
+            transition={{ duration: 0.5, delay: 0.25}}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col items-center justify-start space-y-4">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -53,8 +63,17 @@ function Skills() {
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Visual Studio Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
                     <img className="w-[8vw] hover:scale-125 transition ease-in-out duration-300 transform" title="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
                 </div>
-            </div>
-            <div className="flex flex-col items-center justify-start space-y-6">
+            </motion.div>
+            <motion.div 
+            variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 }
+            }}
+            transition={{ duration: 0.5, delay: 0.25}}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col items-center justify-start space-y-6">
                 <h1 className="
                 font-medium
                 text-4xl
@@ -218,7 +237,7 @@ function Skills() {
                         </AccordionDetails>
                     </Accordion>
                 </div>
-            </div>
+            </motion.div>
         </div>
         <div className="flex justify-center items-center">
             <a className="bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500
