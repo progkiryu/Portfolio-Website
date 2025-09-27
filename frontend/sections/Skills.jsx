@@ -239,11 +239,20 @@ function Skills() {
                 </div>
             </motion.div>
         </div>
-        <div className="flex justify-center items-center">
+        <motion.div 
+        variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 }
+        }}
+        transition={{ duration: 0.5, delay: 0.25}}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex justify-center items-center">
             <a className="bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500
             text-white px-6 py-3 rounded-md text-lg font-medium
             hover:scale-125 transition ease-in-out duration-300 transform" href="https://github.com/progkiryu" target="_blank">View my Github!</a>
-        </div>
+        </motion.div>
     </div>
 }
 
