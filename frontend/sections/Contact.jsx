@@ -5,7 +5,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 function Contact({ copyMessage }) {
 
-    return <div id="contact" className="bg-white w-3/4 flex flex-col mx-auto py-10 space-y-16 items-center justify-center">
+    return <div id="contact" className="bg-[#232121] w-3/4 flex flex-col mx-auto py-10 space-y-16 items-center justify-center">
         <motion.div 
         variants={{
             hidden: { opacity: 0, y: 50 },
@@ -44,7 +44,7 @@ function Contact({ copyMessage }) {
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
                 </a>
                 <a className="w-20
-                hover:scale-125 transition-all ease-in-out duration-300 transform" href="https://github.com/progkiryu" title="GitHub" target="_blank">
+                hover:scale-125 transition-all ease-in-out duration-300 transform bg-white" href="https://github.com/progkiryu" title="GitHub" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" />
                 </a>
                 <EmailIcon className="!w-20 !h-20
