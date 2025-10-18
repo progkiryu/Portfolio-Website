@@ -32,13 +32,10 @@ function App() {
 
   return (
     <>
-      <div className="h-full !scroll-smooth
-      bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500
+      <div className="h-full min-h-screen w-full !scroll-smooth
+      bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500 pt-5
       flex flex-col items-center">
         <Intro />
-        <About />
-        <Skills />
-        <Contact copyMessage={copyMessage} />
       </div>
       {showNotification && <div className="flex justify-center">
         <h1 className="fixed top-10 py-3 px-3 rounded-xl text-white text-center bg-green-500">{message}</h1>
