@@ -1,9 +1,4 @@
 import { motion } from "framer-motion";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import { useState } from "react";
-import { isDev } from "../main";
 
 function Skills() {
 

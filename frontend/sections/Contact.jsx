@@ -3,9 +3,40 @@ import { motion } from "framer-motion";
 import Email from "../components/Email.jsx";
 import EmailIcon from '@mui/icons-material/Email';
 
+import { isDev } from "../main.jsx";
+
 function Contact({ copyMessage }) {
 
-    return <div></div>
+    return (
+        <motion.div className="w-full max-w-5xl bg-[#282828] text-white items-center rounded-xl p-5 flex flex-col gap-10"
+        variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0}
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.5, delay: 0.25 }}>
+            <p className="text-3xl sm:text-4xl font-medium text-center">&lt;Contact me! 📱 /&gt;</p>
+
+            <hr className="w-full" />
+
+            <div className="flex flex-col sm:flex-row w-full gap-10 sm:gap-0">
+                <Email />
+                <div className="w-full flex flex-row gap-5 sm:flex-col sm:w-1/2 items-center justify-center">
+                    <a className="w-[100px] h-[100px]
+                    hover:scale-125 transition-all ease-in-out duration-300 transform" href="https://www.linkedin.com/in/denver-klein-mesa-aa323231a" title="LinkedIn" target="_blank">
+                       <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
+                    </a>
+                    <a className="w-[100px] h-[100px]
+                    hover:scale-125 transition-all ease-in-out duration-300 transform" href="https://github.com/progkiryu" title="GitHub" target="_blank">
+                       <img src={isDev() ? "../../files/github.png" : "assets/files/github.png"} />
+                    </a>
+                    <EmailIcon className="!w-[100px] !h-[100px]
+                    hover:scale-125 !transition-all ease-in-out !duration-300 transform" onClick={() => copyMessage("email")} />
+                </div>
+            </div>
+        </motion.div>
+    );
     // <div id="contact" className="bg-white w-3/4 flex flex-col mx-auto py-10 space-y-16 items-center justify-center">
     //     <motion.div 
     //     variants={{

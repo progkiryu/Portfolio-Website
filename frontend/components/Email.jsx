@@ -19,15 +19,14 @@ function Email({ copyMessage }) {
         e.target.reset();
     }
 
-    return <form onSubmit={sendEmail} className="rounded-3xl w-3/4 space-y-4 py-5
-     bg-[#232121] flex flex-col justify-center items-center">
-        <label className="text-xl text-left text-white w-3/4">Name:</label>
+    return <form onSubmit={sendEmail} className="w-full sm:w-1/2 flex flex-col items-center justify-center bg-[#343434] border-2 rounded-xl border-white gap-5">
+        <label className="text-xl text-left text-white w-3/4 mt-5">Name:</label>
         <input className="rounded-lg w-3/4" type="text" name="name" placeholder="what is it..." required></input>
         
         <label className="text-xl text-left text-white w-3/4">Message:</label>
         <textarea className="w-3/4 rounded-lg h-[15vh]" name="message" placeholder="ask me anything..." required></textarea>
 
-        <button className="w-3/4 space-y-10
+        <button className="mb-5
         bg-gradient-to-r
         from-yellow-500
         via-red-500

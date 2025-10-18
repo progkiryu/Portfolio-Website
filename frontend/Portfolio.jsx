@@ -1,6 +1,7 @@
 import Intro from "./sections/Intro.jsx";
-import About from "./sections/About.jsx";
+import Experience from "./sections/Experience.jsx";
 import Skills from "./sections/Skills.jsx";
+import Projects from "./sections/Projects.jsx";
 import Contact from "./sections/Contact.jsx";
 import { useState } from "react";
 import { motion, useScroll } from "framer-motion"
@@ -36,9 +37,13 @@ function App() {
   return (
     <>
       <div className="h-full min-h-screen w-full !scroll-smooth
-      bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500 pt-5
-      flex flex-col items-center">
+      bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500 p-5
+      flex flex-col items-center gap-10">
         <Intro />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
       </div>
       {showNotification && <div className="flex justify-center">
         <h1 className="fixed top-10 py-3 px-3 rounded-xl text-white text-center bg-green-500">{message}</h1>
