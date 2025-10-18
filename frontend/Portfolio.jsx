@@ -43,7 +43,7 @@ function App() {
         <Experience />
         <Skills />
         <Projects />
-        <Contact />
+        <Contact copyMessage={copyMessage} />
       </div>
       {showNotification && <div className="flex justify-center">
         <h1 className="fixed top-10 py-3 px-3 rounded-xl text-white text-center bg-green-500">{message}</h1>

@@ -21,7 +21,7 @@ function Contact({ copyMessage }) {
             <hr className="w-full" />
 
             <div className="flex flex-col sm:flex-row w-full gap-10 sm:gap-0">
-                <Email />
+                <Email copyMessage={copyMessage} />
                 <div className="w-full flex flex-row gap-5 sm:flex-col sm:w-1/2 items-center justify-center">
                     <a className="w-[100px] h-[100px]
                     hover:scale-125 transition-all ease-in-out duration-300 transform" href="https://www.linkedin.com/in/denver-klein-mesa-aa323231a" title="LinkedIn" target="_blank">
