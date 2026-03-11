@@ -21,10 +21,10 @@ function Email({ copyMessage }) {
 
     return <form onSubmit={sendEmail} className="w-full sm:w-1/2 flex flex-col items-center justify-center bg-[#343434] border-2 rounded-xl border-white gap-5">
         <label className="text-xl text-left text-white w-3/4 mt-5">Name:</label>
-        <input className="rounded-lg w-3/4" type="text" name="name" placeholder="what is it..." required></input>
+        <input className="rounded-lg w-3/4 p-2 text-black" type="text" name="name" placeholder="what is it..." required></input>
         
         <label className="text-xl text-left text-white w-3/4">Message:</label>
-        <textarea className="w-3/4 rounded-lg h-[15vh]" name="message" placeholder="ask me anything..." required></textarea>
+        <textarea className="p-2 text-black w-3/4 rounded-lg h-[15vh]" name="message" placeholder="ask me anything..." required></textarea>
 
         <button className="mb-5
         bg-gradient-to-r

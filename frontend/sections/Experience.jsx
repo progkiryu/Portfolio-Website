@@ -34,7 +34,7 @@ function Experience() {
 
                 <Accordion expanded={expanded === "exp1"} disableGutters className="!bg-[#343434] max-w-3xl !rounded-xl !text-white"
                 onChange={handleChange("exp1")}>
-                    <AccordionSummary className="w-full">
+                    <AccordionSummary className={`w-full ${expanded !== "exp1" && "hover:shadow-lg !transition duration-200 !shadow-green-500"}`}>
                         <div className="w-full h-10 flex justify-between items-center">
                             <h2 className="text-2xl font-medium">Optik Consultancy</h2>
                             <img

@@ -47,7 +47,7 @@ function Intro() {
             <hr />
 
             <p className="text-center">
-                I am currently in my 3rd-year/penultimate year of Software Engineering @ UTS. I am
+                I am currently in my 4th year of Software Engineering @ UTS. I am
                 extremely passionate about software development, extending to website & desktop application
                 development, algorithmic implementation and UI/UX design.
                 This all stemmed from my liking towards game development in high-school experimenting with Scratch
