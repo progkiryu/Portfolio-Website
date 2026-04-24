@@ -24,9 +24,12 @@ import InteractiveGlobe from './components/Globe';
 
 function App() {
 
-  // states
+  // refs
   const inputElement = useRef(null);
   const headerElement = useRef(null);
+  const audioElement = useRef(null);
+
+  // states
 
   const [activeSection, setActiveSection] = useState(null);
   const [game, setGame] = useState(false);
@@ -90,6 +93,7 @@ function App() {
       if (guessData.includes(result)) return;
       setGuessData(prev => [...prev, result]);
       if (country.toLowerCase() === "Philippines".toLowerCase()) {
+        audioElement.current.play();
         setFound(true);
       }
       return;
@@ -106,6 +110,8 @@ function App() {
   return (
     <>
       <div className="w-screen min-h-screen h-full relative overflow-hidden flex items-center justify-center">
+        <audio ref={audioElement} src="win.mp3" />
+
 
         {/* game interface */}
         <InteractiveGlobe game={game} guessData={guessData} />
@@ -119,7 +125,7 @@ function App() {
             exit={{ opacity: 0 }}
             transition={{ ease: "easeOut", duration: 0.4 }} />
 
-            <motion.div className="flex flex-col items-center justify-center w-full max-w-3xl gap-5 z-10"
+            <motion.div className="flex flex-col items-center justify-center w-full max-w-3xl gap-5 overflow-hidden z-10"
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ ease: "easeOut", duration: 0.4 }}>

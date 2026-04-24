@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactGlobe from "react-globe.gl";
 import { centroid } from "@turf/turf";
+import * as THREE from "three";
 
 export default function InteractiveGlobe({ game, guessData }) {
   const globeRef = useRef();
@@ -32,6 +33,9 @@ export default function InteractiveGlobe({ game, guessData }) {
     // Start rotating by default
     controls.autoRotate = true;
     controls.autoRotateSpeed = 1.5;
+
+    controls.minDistance = 120; // closest zoom (tweak this)
+    controls.maxDistance = 800; // farthest zoom
 
     // Stop rotation when user interacts
     const stopRotation = () => {
@@ -84,17 +88,66 @@ export default function InteractiveGlobe({ game, guessData }) {
     );
   }, [guessData]);
 
+  useEffect(() => {
+    const globe = globeRef.current;
+    if (!globe) return;
+
+    const scene = globe.scene();
+
+    const starCount = 8000;
+    const positions = new Float32Array(starCount * 3);
+
+    // Generate random star positions in a spherical shell
+    for (let i = 0; i < starCount; i++) {
+      const r = 800 + Math.random() * 800; // distance from center
+      const theta = Math.random() * 2 * Math.PI;
+      const phi = Math.acos(2 * Math.random() - 1);
+
+      const x = r * Math.sin(phi) * Math.cos(theta);
+      const y = r * Math.sin(phi) * Math.sin(theta);
+      const z = r * Math.cos(phi);
+
+      positions[i * 3] = x;
+      positions[i * 3 + 1] = y;
+      positions[i * 3 + 2] = z;
+    }
+
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+
+    const material = new THREE.PointsMaterial({
+      color: 0xffffff,
+      size: 1.2,
+      sizeAttenuation: true,
+      depthWrite: false,
+    });
+
+    const stars = new THREE.Points(geometry, material);
+    scene.add(stars);
+
+    // Subtle rotation for depth effect
+    const animate = () => {
+      stars.rotation.y += 0.0003;
+      stars.rotation.x += 0.0001;
+      requestAnimationFrame(animate);
+    };
+    animate();
+
+    return () => {
+      scene.remove(stars);
+      geometry.dispose();
+      material.dispose();
+    };
+  }, []);
+
   return (
     <div
       ref={containerRef}
-      className="w-full h-full absolute flex items-center justify-center bg-[#000011]"
+      className="w-full h-full absolute flex items-center justify-center bg-black"
     >
         <ReactGlobe
           ref={globeRef}
-          width={size.width}
-          height={size.height}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
-          backgroundColor="rgba(0,0,0,0)"
           polygonsData={guessData}
           polygonCapColor={(polygon) => {
             const name = polygon.properties.name;
