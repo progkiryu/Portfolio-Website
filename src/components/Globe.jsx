@@ -8,7 +8,7 @@ const points = [
   { lat: 35.6895, lng: 139.6917, label: "Tokyo" },
 ];
 
-export default function InteractiveGlobe({ game }) {
+export default function InteractiveGlobe({ game, worldData }) {
   const globeRef = useRef();
   const containerRef = useRef();
   const userStoppedRotation = useRef(false);
@@ -81,6 +81,10 @@ export default function InteractiveGlobe({ game }) {
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
           backgroundColor="rgba(0,0,0,0)"
           pointsData={points}
+          polygonsData={worldData}
+          polygonCapColor={() => 'rgba(0,255,255,0.4)'}
+          polygonSideColor={() => 'rgba(0,0,255,0.15)'}
+          polygonStrokeColor={() => '#111'}
           pointLat="lat"
           pointLng="lng"
           pointLabel="label"

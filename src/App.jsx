@@ -68,7 +68,7 @@ function App() {
     fetch("custom.geo.json")
       .then((res) => res.json())
       .then((data) => {
-        setWorldData(data);
+        setWorldData(data.features);
       })
       .catch((err) => console.error(err));
 
@@ -97,7 +97,8 @@ function App() {
       <div className="w-screen h-screen relative overflow-hidden flex items-center justify-center">
 
         {/* game interface */}
-        <InteractiveGlobe game={game} />
+        {worldData &&
+        <InteractiveGlobe game={game} worldData={worldData} /> }
 
         {/* main portfolio content */}
         <AnimatePresence mode="wait">
