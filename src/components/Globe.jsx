@@ -1,14 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactGlobe from "react-globe.gl";
+import { centroid } from "@turf/turf";
 
-const points = [
-  { lat: -33.8688, lng: 151.2093, label: "Sydney" },
-  { lat: 40.7128, lng: -74.006, label: "New York" },
-  { lat: 51.5072, lng: -0.1276, label: "London" },
-  { lat: 35.6895, lng: 139.6917, label: "Tokyo" },
-];
-
-export default function InteractiveGlobe({ game, worldData }) {
+export default function InteractiveGlobe({ game, guessData }) {
   const globeRef = useRef();
   const containerRef = useRef();
   const userStoppedRotation = useRef(false);
@@ -69,6 +63,27 @@ export default function InteractiveGlobe({ game, worldData }) {
     userStoppedRotation.current = false;
   }, [game]);
 
+  useEffect(() => {
+    const globe = globeRef.current;
+    if (!globe || !guessData.length) return;
+
+    // Get the LAST guessed country (adjust if needed)
+    const lastCountry = guessData[guessData.length - 1];
+
+    const center = centroid(lastCountry); // GeoJSON feature
+    const [lng, lat] = center.geometry.coordinates;
+
+    const controls = globe.controls();  
+    controls.autoRotate = false;
+    globe.pointOfView(
+      {
+        lat,
+        lng,
+      },
+      1000 // animation duration (ms)
+    );
+  }, [guessData]);
+
   return (
     <div
       ref={containerRef}
@@ -80,9 +95,12 @@ export default function InteractiveGlobe({ game, worldData }) {
           height={size.height}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
           backgroundColor="rgba(0,0,0,0)"
-          pointsData={points}
-          polygonsData={worldData}
-          polygonCapColor={() => 'rgba(0,255,255,0.4)'}
+          polygonsData={guessData}
+          polygonCapColor={(polygon) => {
+            const name = polygon.properties.name;
+            if (name.toLowerCase() === "Philippines".toLowerCase()) return "green";
+            return "red";
+          }}
           polygonSideColor={() => 'rgba(0,0,255,0.15)'}
           polygonStrokeColor={() => '#111'}
           pointLat="lat"

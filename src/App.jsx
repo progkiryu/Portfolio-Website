@@ -1,3 +1,4 @@
+// mui icons
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import SendIcon from '@mui/icons-material/Send';
@@ -7,11 +8,14 @@ import ApiIcon from '@mui/icons-material/Api';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import InputIcon from '@mui/icons-material/Input';
+import LocationPinIcon from '@mui/icons-material/LocationPin';
 
+// other packages
 import { AnimatePresence, motion } from "motion/react";
 import Typed from "typed.js";
 import { useState, useEffect, useRef } from "react";
 
+// components
 import Experience from './sections/Experience';
 import TechStack from './sections/TechStack';
 import Projects from './sections/Projects';
@@ -20,6 +24,7 @@ import InteractiveGlobe from './components/Globe';
 
 function App() {
 
+  // states
   const inputElement = useRef(null);
   const headerElement = useRef(null);
 
@@ -27,11 +32,12 @@ function App() {
   const [game, setGame] = useState(false);
 
   const [found, setFound] = useState(false);
-  const [guesses, setGuesses] = useState([]);
+  const [error, setError] = useState("");
 
   const [countries, setCountries] = useState([]);
-  const [worldData, setWorldData] = useState(null);
+  const [guessData, setGuessData] = useState([]);
 
+  // typed.js effect
   function initTyped(element) {
     if (!element) return () => {};
 
@@ -57,18 +63,12 @@ function App() {
   } 
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all?fields=name")
-      .then(res => res.json())
-      .then(data => {
-        const names = data.map(country => country.name.common);
-        setCountries(names);
-      })
-      .catch(err => console.error(err));
-
+    // fetch country info
     fetch("custom.geo.json")
       .then((res) => res.json())
       .then((data) => {
-        setWorldData(data.features);
+        console.log(data.features);
+        setCountries(data.features);
       })
       .catch((err) => console.error(err));
 
@@ -77,28 +77,38 @@ function App() {
   }, [game]);
 
   const handleGuess = () => {
+
     const country = inputElement.current.value;
     if (!country) return;
 
-    const exists = countries.some(
-      a => a.toLowerCase() === country.toLowerCase()
+    const result = countries.find(
+      a => a.properties.name.toLowerCase() === country.toLowerCase()
     );
-    if (exists) {
-      setGuesses(prev => [...prev, country]);
+
+    console.log(result.geometry);
+    if (result) {
+      if (guessData.includes(result)) return;
+      setGuessData(prev => [...prev, result]);
       if (country.toLowerCase() === "Philippines".toLowerCase()) {
         setFound(true);
       }
+      return;
     }
     console.log("doesn't exist!");
   }
 
+  const resetGame = () => {
+    setFound(false);
+    setGame(false);
+    setGuessData([]);
+  }
+
   return (
     <>
-      <div className="w-screen h-screen relative overflow-hidden flex items-center justify-center">
+      <div className="w-screen min-h-screen h-full relative overflow-hidden flex items-center justify-center">
 
         {/* game interface */}
-        {worldData &&
-        <InteractiveGlobe game={game} worldData={worldData} /> }
+        <InteractiveGlobe game={game} guessData={guessData} />
 
         {/* main portfolio content */}
         <AnimatePresence mode="wait">
@@ -283,17 +293,37 @@ function App() {
           </>) : (
           <>
             {/* back button for game */}
-            <div className="absolute fixed top-5 left-5 z-50">
+            <div className="absolute fixed top-5 left-5 z-50 flex flex-col gap-2 w-[250px]">
               <motion.button
                 onClick={() => setGame(false)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-[250px] cursor-pointer p-5 border-1 border-yellow-300 rounded-md shadow-yellow-300 shadow-lg bg-gray-800
+                className="w-full cursor-pointer p-5 border-1 border-yellow-300 rounded-md shadow-yellow-300 shadow-lg bg-gray-800
                 text-white hover:bg-yellow-400 transition duration-300 flex justify-center items-center gap-2"
               >
                 <ArrowBackIcon />
                 <p className="text-xl font-semibold">BACK</p>
               </motion.button>
+
+              { !found ? (
+                <>
+                  <h2 className="text-white text-xl font-medium">Guess my ethnicity!</h2>
+                  <div className="flex gap-2">
+                    <input ref={inputElement} className="bg-white rounded-l-md p-2" />
+                    <button onClick={handleGuess}
+                    className="p-2 bg-green-600 cursor-pointer hover:bg-green-300 rounded-r-md">
+                      <LocationPinIcon />
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-white text-xl font-medium">CONGRATULATIONS! I AM FILIPINO!</h2>
+                  <button onClick={resetGame}
+                  className="p-2 bg-red-600 hover:bg-red-300 text-white cursor-pointer hover:bg-green-300 rounded-md"
+                  >RESET</button>
+                </>
+              )}
             </div>
           </>
           )}
