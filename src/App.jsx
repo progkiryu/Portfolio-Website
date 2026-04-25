@@ -39,44 +39,32 @@ function App() {
 
   const [countries, setCountries] = useState([]);
   const [guessData, setGuessData] = useState([]);
+  
+  function TypedHeader() {
+    const ref = useRef(null);
 
-  // typed.js effect
-  function initTyped(element) {
-    if (!element) return () => {};
+    useEffect(() => {
+      const typed = new Typed(ref.current, {
+        strings: [
+          "Software Engineer",
+          "Backend Developer",
+          "Frontend Developer",
+          "Web Developer",
+          "Frontend Developer",
+          "IT Help Desk Officer",
+          "please give me a job..."
+        ],
+        typeSpeed: 50,
+        backSpeed: 35,
+        showCursor: false,
+        loop: true,
+      });
 
-    const typed = new Typed(element, {
-      strings: [
-        "Software Engineer",
-        "Backend Developer",
-        "Frontend Developer",
-        "Web Developer",
-        "Frontend Developer",
-        "IT Help Desk Officer",
-        "please give me a job..."
-      ],
-      typeSpeed: 50,
-      backSpeed: 35,
-      showCursor: false,
-      loop: true,
-    });
+      return () => typed.destroy();
+    }, []);
 
-    return () => {
-      typed.destroy();
-    };
-  } 
-
-  useEffect(() => {
-    // fetch country info
-    fetch("custom.geo.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setCountries(data.features);
-      })
-      .catch((err) => console.error(err));
-
-    const cleanup = initTyped(headerElement.current);
-    return cleanup;
-  }, [game]);
+    return <p ref={ref} className="text-2xl text-orange-300 font-medium" />;
+  }
 
   const handleGuess = () => {
 
@@ -115,20 +103,26 @@ function App() {
         {/* game interface */}
         <InteractiveGlobe game={game} guessData={guessData} />
 
+        { !game &&
+          <motion.div className="fixed top-0 left-0 w-full h-full bg-black/40 z-5"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ ease: "easeOut", duration: 0.4 }} />
+        }
+
+
         {/* main portfolio content */}
         <AnimatePresence mode="wait">
         { !game ? (
-          <>
-            <motion.div className="fixed top-0 left-0 w-full h-full bg-black/40 z-5"
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ ease: "easeOut", duration: 0.4 }} />
-
-            <motion.div className="flex flex-col items-center justify-center w-full max-w-3xl gap-5 z-10 m-5"
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ ease: "easeOut", duration: 0.4 }}>
-
+            <motion.div
+              key="menu"
+              className="flex flex-col items-center justify-center w-full max-w-3xl gap-5 z-10 m-5"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ ease: "easeOut", duration: 0.4 }}
+            >
               {/* intro */}
               <div className="w-full border-1 rounded-md border-blue-500 p-5 shadow-xl shadow-blue-300 
               flex flex-col sm:flex-row items-center gap-5 bg-gray-800">
@@ -168,7 +162,7 @@ function App() {
               <div className="w-full border-1 rounded-md border-blue-500 p-5 shadow-xl shadow-blue-300 
               flex items-center gap-5 bg-gray-800">
                 <h2 className="text-2xl font-semibold text-white">Looking to be a:</h2>
-                <p ref={headerElement} className="text-2xl text-orange-300 font-medium" />
+                <TypedHeader />
               </div>
 
               {/* sections */}
@@ -294,11 +288,14 @@ function App() {
                   </a>
                 </div>
               </div>
-            </motion.div>
-          </>) : (
-          <>
-            {/* back button for game */}
-            <div className="absolute fixed top-5 left-5 z-50 flex flex-col gap-2 w-[250px]">
+            </motion.div>) : (
+            <motion.div key="game-wrapper"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.3 }}
+              className="absolute fixed top-5 left-5 z-50 flex flex-col gap-2 w-[250px]"
+            >
               <motion.button
                 onClick={() => setGame(false)}
                 whileHover={{ scale: 1.05 }}
@@ -329,8 +326,7 @@ function App() {
                   >RESET</button>
                 </>
               )}
-            </div>
-          </>
+            </motion.div>
           )}
           </AnimatePresence>
       </div>
