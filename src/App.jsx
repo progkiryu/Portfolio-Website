@@ -70,7 +70,6 @@ function App() {
     fetch("custom.geo.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.features);
         setCountries(data.features);
       })
       .catch((err) => console.error(err));
@@ -125,7 +124,7 @@ function App() {
             exit={{ opacity: 0 }}
             transition={{ ease: "easeOut", duration: 0.4 }} />
 
-            <motion.div className="flex flex-col items-center justify-center w-full max-w-3xl gap-5 overflow-hidden z-10"
+            <motion.div className="flex flex-col items-center justify-center w-full max-w-3xl gap-5 z-10 m-5"
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ ease: "easeOut", duration: 0.4 }}>

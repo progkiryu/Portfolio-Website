@@ -146,20 +146,22 @@ export default function InteractiveGlobe({ game, guessData }) {
       className="w-full h-full absolute flex items-center justify-center bg-black"
     >
         <ReactGlobe
-          ref={globeRef}
-          globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
-          polygonsData={guessData}
-          polygonCapColor={(polygon) => {
-            const name = polygon.properties.name;
-            if (name.toLowerCase() === "Philippines".toLowerCase()) return "green";
-            return "red";
-          }}
-          polygonSideColor={() => 'rgba(0,0,255,0.15)'}
-          polygonStrokeColor={() => '#111'}
-          pointLat="lat"
-          pointLng="lng"
-          pointLabel="label"
-        />
+        ref={globeRef}
+        width={size.width}
+        height={size.height}
+        globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+        polygonsData={guessData}
+        polygonCapColor={(polygon) => {
+          const name = polygon.properties.name;
+          if (name.toLowerCase() === "philippines") return "green";
+          return "red";
+        }}
+        polygonSideColor={() => "rgba(0,0,255,0.15)"}
+        polygonStrokeColor={() => "#111"}
+        pointLat="lat"
+        pointLng="lng"
+        pointLabel="label"
+      />
     </div>
   );
 }
