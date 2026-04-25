@@ -66,6 +66,23 @@ function App() {
     return <p ref={ref} className="text-2xl text-orange-300 font-medium" />;
   }
 
+  useEffect(() => {
+    // fetch country info
+    fetch("custom.geo.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setCountries(data.features);
+      })
+      .catch((err) => console.error(err));
+
+    window.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        handleGuess();
+      }
+    });
+  }, [game]);
+
   const handleGuess = () => {
 
     const country = inputElement.current.value;
