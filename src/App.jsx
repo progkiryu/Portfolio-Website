@@ -92,7 +92,6 @@ function App() {
       a => a.properties.name.toLowerCase() === country.toLowerCase()
     );
 
-    console.log(result.geometry);
     if (result) {
       if (guessData.includes(result)) return;
       setGuessData(prev => [...prev, result]);
@@ -100,9 +99,8 @@ function App() {
         audioElement.current.play();
         setFound(true);
       }
-      return;
+      inputElement.current.value = "";
     }
-    console.log("doesn't exist!");
   }
 
   const resetGame = () => {
