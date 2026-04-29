@@ -9,6 +9,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import InputIcon from '@mui/icons-material/Input';
 import LocationPinIcon from '@mui/icons-material/LocationPin';
+import ErrorIcon from '@mui/icons-material/Error';
+import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 
 // other packages
 import { AnimatePresence, motion } from "motion/react";
@@ -36,6 +38,7 @@ function App() {
 
   const [found, setFound] = useState(false);
   const [error, setError] = useState("");
+  const [copied, setCopied] = useState("");
 
   const [countries, setCountries] = useState([]);
   const [guessData, setGuessData] = useState([]);
@@ -74,17 +77,10 @@ function App() {
         setCountries(data.features);
       })
       .catch((err) => console.error(err));
-
-    window.addEventListener("keydown", function(e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        handleGuess();
-      }
-    });
   }, [game]);
 
   const handleGuess = () => {
-
+    console.log("hello!");
     const country = inputElement.current.value;
     if (!country) return;
 
@@ -93,14 +89,26 @@ function App() {
     );
 
     if (result) {
-      if (guessData.includes(result)) return;
+      const alreadyGuessed = guessData.find(
+        a => a.properties.name.toLowerCase() === result.properties.name.toLowerCase()
+      )
+      if (alreadyGuessed) {
+        console.log("already guessed!");
+        setError("Already guessed!");
+        setTimeout(() => setError(""), 5000);
+        return;
+      }
       setGuessData(prev => [...prev, result]);
       if (country.toLowerCase() === "Philippines".toLowerCase()) {
         audioElement.current.play();
         setFound(true);
       }
+      setError(false);
       inputElement.current.value = "";
+      return;
     }
+    setError("Invalid guess!");
+    setTimeout(() => setError(""), 5000);
   }
 
   const resetGame = () => {
@@ -198,7 +206,10 @@ function App() {
                       transition={{ duration: 0.4, ease: "easeOut" }}
                       className="w-full"
                     >
-                      <a className="w-full cursor-pointer p-5 border-1 border-blue-300 rounded-md shadow-blue-300 hover:shadow-xl bg-gray-800 
+                      <a onClick={() => {
+                        setCopied("Resume downloaded!");
+                        setTimeout(() => setCopied(""), 5000);
+                      }} className="w-full cursor-pointer p-5 border-1 border-blue-300 rounded-md shadow-blue-300 hover:shadow-xl bg-gray-800 
                       text-white hover:bg-blue-400 transition duration-400 flex justify-center items-center gap-2 hover:scale-105" download href="Career Resume - Denver Klein Mesa.pdf">
                         <SendIcon className="text-gray-500" />
                         <p className="text-xl font-semibold">RESUME</p>
@@ -298,7 +309,11 @@ function App() {
                     />
                   </a>
 
-                  <a onClick={() => navigator.clipboard.writeText("denmesa24@outlook.com")}>
+                  <a onClick={() => {
+                    navigator.clipboard.writeText("denmesa24@outlook.com");
+                    setCopied("Email copied to clipboard!");
+                    setTimeout(() => setCopied(""), 5000);
+                    }}>
                     <EmailIcon className="text-white !h-[40px] !w-[40px] hover:scale-125 cursor-pointer !transition duration-200" />
                   </a>
                 </div>
@@ -326,12 +341,25 @@ function App() {
                 <>
                   <h2 className="text-white text-xl font-medium">Guess my ethnicity!</h2>
                   <div className="flex gap-2">
-                    <input ref={inputElement} className="bg-white rounded-l-md p-2" />
+                    <input ref={inputElement} 
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleGuess();
+                      }
+                    }} className="bg-white rounded-l-md p-2" />
                     <button onClick={handleGuess}
                     className="p-2 bg-green-600 cursor-pointer hover:bg-green-300 rounded-r-md">
                       <LocationPinIcon />
                     </button>
                   </div>
+                  {
+                    error &&
+                    <div className="text-white p-2 flex gap-2 !text-red-600 rounded-md">
+                      <ErrorIcon />
+                      <p>{error}</p>
+                    </div>
+                  }
                 </>
               ) : (
                 <>
@@ -344,6 +372,22 @@ function App() {
             </motion.div>
           )}
           </AnimatePresence>
+
+          <AnimatePresence>
+          {copied && (
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-gray-800 border-1 border-green-500 shadow-green-300 shadow-sm
+              fixed top-5 right-5 bg-gray-900 text-white px-4 py-3 rounded-md shadow-lg z-50 flex items-center gap-2"
+            >
+              <CircleNotificationsIcon />
+              <p>{copied}</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </>
   )
