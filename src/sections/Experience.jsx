@@ -8,6 +8,26 @@ export default function Experience() {
             <div className="flex flex-col gap-6">
 
                 {/* EXPERIENCE ITEM */}
+                <div className="relative pl-6 border-l-2 border-red-400">
+                    <div className="absolute -left-[7px] top-2 w-3 h-3 bg-red-400 rounded-full"></div>
+
+                    <div className="flex flex-wrap justify-between items-center gap-2">
+                        <h3 className="text-white text-xl font-semibold">
+                            Outsource Experts AU
+                        </h3>
+                        <span className="text-gray-400 text-sm">
+                            May 2026 - ???
+                        </span>
+                    </div>
+
+                    <p className="text-red-400 text-sm mb-2">
+                        Junior Software Engineer
+                    </p>
+
+                    <p className="text-sm text-gray-300">???</p>
+                </div>
+
+                {/* EXPERIENCE ITEM */}
                 <div className="relative pl-6 border-l-2 border-green-400">
                     {/* Dot */}
                     <div className="absolute -left-[7px] top-2 w-3 h-3 bg-green-400 rounded-full"></div>
